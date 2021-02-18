@@ -1,0 +1,72 @@
+{
+  "name": "node-mongoose-models",
+  "version": "0.0.1",
+  "description": "Exmple models for node-express-microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint **/*.js --ignore-pattern node_modules/"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "lint --fix",
+      "test"
+    ]
+  },
+  "files": [
+    "models",
+    "config",
+    "LICENSE",
+    "README.md",
+    "mongoose-connect.js"
+  ],
+  "author": "Eduardo Parra Mazuecos",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soker90/node-mongoose-models.git"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bluebird": "^3.7.2",
+    "mongodb-memory-server": "^6.9.3",
+    "mongoose": "^5.11.13",
+    "mongoose-connect": "0.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.1.3",
+    "jest": "^26.6.1",
+    "jest-circus": "^26.6.1",
+    "jest-environment-node": "^26.6.1",
+    "pre-commit": "^1.2.2"
+  },
+  "jest": {
+    "bail": true,
+    "testEnvironment": "<rootDir>/test/mongo-test-environment",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/bootstrap-jest.js"
+    ],
+    "coverageReporters": [
+      "json",
+      "text-summary",
+      "lcov",
+      "clover"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/models/**"
+    ],
+    "coveragePathIgnorePatterns": [],
+    "testRunner": "jest-circus/runner"
+  },
+  "keywords": [
+    "database",
+    "mongodb"
+  ]
+}

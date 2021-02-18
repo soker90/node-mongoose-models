@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "myNumber": 4,
+      "myString": "2021"
+    },
+    {
+      "myNumber": 2,
+      "myString": "sString"
+    }
+  ]
+}
