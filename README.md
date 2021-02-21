@@ -13,7 +13,7 @@ This is a module of models for Arroyo ERP.
 ## Installation
 
 ```bash
-  npm install arroyo-erp-models --save
+  npm install my-models-package --save
 ```
 
 ## Cambios en la versión
